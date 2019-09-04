@@ -1,0 +1,17 @@
+C:\Users\mohan\source\repos\ToolzAddinOutlook\ToolzAddinOutlook\bin\Debug\ToolzAddinOutlook.dll
+C:\Users\mohan\source\repos\ToolzAddinOutlook\ToolzAddinOutlook\bin\Debug\ToolzAddinOutlook.pdb
+C:\Users\mohan\source\repos\ToolzAddinOutlook\ToolzAddinOutlook\bin\Debug\ToolzAddinOutlook.dll.manifest
+C:\Users\mohan\source\repos\ToolzAddinOutlook\ToolzAddinOutlook\bin\Debug\ToolzAddinOutlook.vsto
+C:\Users\mohan\source\repos\ToolzAddinOutlook\ToolzAddinOutlook\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+C:\Users\mohan\source\repos\ToolzAddinOutlook\ToolzAddinOutlook\bin\Debug\Microsoft.Office.Tools.Outlook.v4.0.Utilities.dll
+C:\Users\mohan\source\repos\ToolzAddinOutlook\ToolzAddinOutlook\obj\Debug\ToolzAddinOutlook.csprojAssemblyReference.cache
+C:\Users\mohan\source\repos\ToolzAddinOutlook\ToolzAddinOutlook\obj\Debug\ToolzAddinOutlook.Properties.Resources.resources
+C:\Users\mohan\source\repos\ToolzAddinOutlook\ToolzAddinOutlook\obj\Debug\ToolzAddinOutlook.csproj.GenerateResource.cache
+C:\Users\mohan\source\repos\ToolzAddinOutlook\ToolzAddinOutlook\obj\Debug\ToolzAddinOutlook.csproj.CoreCompileInputs.cache
+C:\Users\mohan\source\repos\ToolzAddinOutlook\ToolzAddinOutlook\obj\Debug\ToolzAddinOutlook.csproj.CopyComplete
+C:\Users\mohan\source\repos\ToolzAddinOutlook\ToolzAddinOutlook\obj\Debug\ToolzAddinOutlook.dll
+C:\Users\mohan\source\repos\ToolzAddinOutlook\ToolzAddinOutlook\obj\Debug\ToolzAddinOutlook.pdb
+C:\Users\mohan\source\repos\ToolzAddinOutlook\ToolzAddinOutlook\obj\Debug\ToolzAddinOutlook.ToolzRibbon.resources
+C:\Users\mohan\source\repos\ToolzAddinOutlook\ToolzAddinOutlook\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\mohan\source\repos\ToolzAddinOutlook\ToolzAddinOutlook\bin\Debug\ICSharpCode.SharpZipLib.pdb
+C:\Users\mohan\source\repos\ToolzAddinOutlook\ToolzAddinOutlook\bin\Debug\ICSharpCode.SharpZipLib.xml
