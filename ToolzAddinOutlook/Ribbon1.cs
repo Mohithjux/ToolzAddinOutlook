@@ -295,7 +295,11 @@ namespace ToolzAddinOutlook
                     }
                     else
                     {
-
+                        myMailItem.Body = 
+@"********************************************************************
+添付 zip ファイルの復号パスワードは別メールにてご連絡致します
+Password for this mail attachment will be sent in a separate mail
+********************************************************************";
                     }
 
 
