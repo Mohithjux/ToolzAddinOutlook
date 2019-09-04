@@ -277,19 +277,30 @@ namespace ToolzAddinOutlook
                         Int32 position1 = 0;
                         Int32 position2 = 0;
                         Int32 htmlLength, insertPos;
-                        string strHtmlBody1;
+                        Int32 span_position1 = 0;
+                        Int32 span_position2 = 0;
+                        Int32 span_htmlLength, span_insertPos;
+                        string strHtmlBody1, span_strHtmlBody1;
                         htmlLength = myMailItem.HTMLBody.Length;
                         position1 = myMailItem.HTMLBody.IndexOf("<body");
                         htmlLength -= position1;
                         strHtmlBody1 = myMailItem.HTMLBody.Substring(position1, htmlLength);
                         position2 = strHtmlBody1.IndexOf(">");
                         insertPos = position1 + position2 + 1;
+
+                        span_htmlLength = myMailItem.HTMLBody.Length;
+                        span_position1 = myMailItem.HTMLBody.IndexOf("<span");
+                        span_htmlLength -= span_position1;
+                        span_strHtmlBody1 = myMailItem.HTMLBody.Substring(span_position1, span_htmlLength);
+                        span_position2 = span_strHtmlBody1.IndexOf(">");
+
                         myMailItem.HTMLBody = myMailItem.HTMLBody.Insert
-                            (insertPos, 
+                            (insertPos,
+                             myMailItem.HTMLBody.Substring(span_position1, span_position2+1) +
                             "*******************************************************************************************" +
                             "<br>添付 zip ファイルの復号パスワードは別メールにてご連絡致します</br>" +
                             "<br>Password for this mail attachment will be sent in a separate mail</br>" +
-                            "<br>*******************************************************************************************</br>" +
+                            "<br>*******************************************************************************************</br></span>" +
                             "<br></br>"
                             );
                     }
