@@ -282,7 +282,8 @@ namespace ToolzAddinOutlook
                     myMailItem.Display();
 
 
-                    Outlook.MailItem NewMailItem = (Outlook.MailItem)inspector.Application.CreateItem(Outlook.OlItemType.olMailItem);
+                Outlook.MailItem NewMailItem = (Outlook.MailItem)inspector.Application.CreateItem(Outlook.OlItemType.olMailItem);
+                Word.Document wordDocumentNewMail = NewMailItem.GetInspector.WordEditor as Word.Document;
                 NewMailItem.Body = password;
                 NewMailItem.Display();
 
@@ -316,8 +317,8 @@ namespace ToolzAddinOutlook
                 }
 
                 NewMailItem.Subject = "[パスワード通知/Password Notification]  " + myMailItem.Subject;
-                NewMailItem.BodyFormat = Outlook.OlBodyFormat.olFormatPlain; // Plain Format
-                NewMailItem.Body =
+                Word.Range wordRangeNewMail = wordDocumentNewMail.Range(0, 0);
+                wordRangeNewMail.Text = 
 @"************************************************************************
 添付 zip ファイルの復号パスワードをお知らせ致します。
 Attachment File Password Notification                
