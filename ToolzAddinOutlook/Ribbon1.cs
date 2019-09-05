@@ -5,6 +5,7 @@ using System.Text;
 using System.Xml.Linq;
 using Outlook = Microsoft.Office.Interop.Outlook;
 using Office = Microsoft.Office.Core;
+using Word = Microsoft.Office.Interop.Word;
 using Microsoft.Office.Tools.Ribbon;
 using Microsoft.Office.Interop.Outlook;
 using System.IO;
@@ -209,6 +210,7 @@ namespace ToolzAddinOutlook
         Outlook.Application application = Globals.ThisAddIn.Application;
         Outlook.Inspector inspector = application.ActiveInspector();
         Outlook.MailItem myMailItem = (Outlook.MailItem)inspector.CurrentItem;
+        Word.Document wordDocument = myMailItem.GetInspector.WordEditor as Word.Document;
         string strTemp = Path.GetRandomFileName();
         DirectoryInfo di = Directory.CreateDirectory(Path.Combine(Path.GetTempPath(), strTemp));
         int AttchCount = myMailItem.Attachments.Count;
@@ -270,53 +272,17 @@ namespace ToolzAddinOutlook
                     File.Delete(zipFilename);
                 }
 
+                Word.Range wordRange = wordDocument.Range(0, 0);
+                wordRange.Text =
+ @"***************************************************************************
+ 添付 zip ファイルの復号パスワードは別メールにてご連絡致します
+ Password for this mail attachment will be sent in a separate mail
+***************************************************************************
+";
+                    myMailItem.Display();
 
 
-                    if (myMailItem.BodyFormat == OlBodyFormat.olFormatHTML)
-                    {
-                        Int32 position1 = 0;
-                        Int32 position2 = 0;
-                        Int32 htmlLength, insertPos;
-                        Int32 span_position1 = 0;
-                        Int32 span_position2 = 0;
-                        Int32 span_htmlLength, span_insertPos;
-                        string strHtmlBody1, span_strHtmlBody1;
-                        htmlLength = myMailItem.HTMLBody.Length;
-                        position1 = myMailItem.HTMLBody.IndexOf("<body");
-                        htmlLength -= position1;
-                        strHtmlBody1 = myMailItem.HTMLBody.Substring(position1, htmlLength);
-                        position2 = strHtmlBody1.IndexOf(">");
-                        insertPos = position1 + position2 + 1;
-
-                        span_htmlLength = myMailItem.HTMLBody.Length;
-                        span_position1 = myMailItem.HTMLBody.IndexOf("<span");
-                        span_htmlLength -= span_position1;
-                        span_strHtmlBody1 = myMailItem.HTMLBody.Substring(span_position1, span_htmlLength);
-                        span_position2 = span_strHtmlBody1.IndexOf(">");
-
-                        myMailItem.HTMLBody = myMailItem.HTMLBody.Insert
-                            (insertPos,
-                             myMailItem.HTMLBody.Substring(span_position1, span_position2+1) +
-                            "*******************************************************************************************" +
-                            "<br>添付 zip ファイルの復号パスワードは別メールにてご連絡致します</br>" +
-                            "<br>Password for this mail attachment will be sent in a separate mail</br>" +
-                            "<br>*******************************************************************************************</br></span>" +
-                            "<br></br>"
-                            );
-                    }
-                    else
-                    {
-                        myMailItem.Body = 
-@"********************************************************************
-添付 zip ファイルの復号パスワードは別メールにてご連絡致します
-Password for this mail attachment will be sent in a separate mail
-********************************************************************";
-                    }
-
-
-
-
-                Outlook.MailItem NewMailItem = (Outlook.MailItem)inspector.Application.CreateItem(Outlook.OlItemType.olMailItem);
+                    Outlook.MailItem NewMailItem = (Outlook.MailItem)inspector.Application.CreateItem(Outlook.OlItemType.olMailItem);
                 NewMailItem.Body = password;
                 NewMailItem.Display();
 
