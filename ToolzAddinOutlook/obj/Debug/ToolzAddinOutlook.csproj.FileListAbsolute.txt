@@ -24,7 +24,6 @@ C:\Users\mohan\source\GitRepos\ToolzAddinOutlook\ToolzAddinOutlook\ToolzAddinOut
 C:\Users\mohan\source\GitRepos\ToolzAddinOutlook\ToolzAddinOutlook\ToolzAddinOutlook\bin\Debug\Microsoft.Office.Tools.Outlook.v4.0.Utilities.dll
 C:\Users\mohan\source\GitRepos\ToolzAddinOutlook\ToolzAddinOutlook\ToolzAddinOutlook\bin\Debug\ICSharpCode.SharpZipLib.pdb
 C:\Users\mohan\source\GitRepos\ToolzAddinOutlook\ToolzAddinOutlook\ToolzAddinOutlook\bin\Debug\ICSharpCode.SharpZipLib.xml
-C:\Users\mohan\source\GitRepos\ToolzAddinOutlook\ToolzAddinOutlook\ToolzAddinOutlook\obj\Debug\ToolzAddinOutlook.csprojAssemblyReference.cache
 C:\Users\mohan\source\GitRepos\ToolzAddinOutlook\ToolzAddinOutlook\ToolzAddinOutlook\obj\Debug\ToolzAddinOutlook.Properties.Resources.resources
 C:\Users\mohan\source\GitRepos\ToolzAddinOutlook\ToolzAddinOutlook\ToolzAddinOutlook\obj\Debug\ToolzAddinOutlook.ToolzRibbon.resources
 C:\Users\mohan\source\GitRepos\ToolzAddinOutlook\ToolzAddinOutlook\ToolzAddinOutlook\obj\Debug\ToolzAddinOutlook.csproj.GenerateResource.cache
