@@ -284,7 +284,6 @@ namespace ToolzAddinOutlook
 
                 Outlook.MailItem NewMailItem = (Outlook.MailItem)inspector.Application.CreateItem(Outlook.OlItemType.olMailItem);
                 Word.Document wordDocumentNewMail = NewMailItem.GetInspector.WordEditor as Word.Document;
-                NewMailItem.Body = password;
                 NewMailItem.Display();
 
                 foreach (dynamic strAddress in myMailItem.Recipients)
@@ -315,7 +314,7 @@ namespace ToolzAddinOutlook
                     strNewItemAddress.Type = strAddress.Type;
                     strNewItemAddress.Resolve();
                 }
-
+                NewMailItem.BodyFormat = OlBodyFormat.olFormatPlain;
                 NewMailItem.Subject = "[パスワード通知/Password Notification]  " + myMailItem.Subject;
                 Word.Range wordRangeNewMail = wordDocumentNewMail.Range(0, 0);
                 wordRangeNewMail.Text = 

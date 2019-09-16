@@ -7,7 +7,7 @@ using System.Security;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("ToolzAddinOutlook")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Add-In for Outlook with zip Attachement Functionalities")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("ToolzAddinOutlook")]
