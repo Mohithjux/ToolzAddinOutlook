@@ -31,5 +31,6 @@ C:\Users\mohan\source\GitRepos\ToolzAddinOutlook\ToolzAddinOutlook\ToolzAddinOut
 C:\Users\mohan\source\GitRepos\ToolzAddinOutlook\ToolzAddinOutlook\ToolzAddinOutlook\obj\Debug\ToolzAddinOutlook.csproj.CopyComplete
 C:\Users\mohan\source\GitRepos\ToolzAddinOutlook\ToolzAddinOutlook\ToolzAddinOutlook\obj\Debug\ToolzAddinOutlook.dll
 C:\Users\mohan\source\GitRepos\ToolzAddinOutlook\ToolzAddinOutlook\ToolzAddinOutlook\obj\Debug\ToolzAddinOutlook.pdb
-C:\Users\mohan\source\GitRepos\ToolzAddinOutlook\ToolzAddinOutlook\ToolzAddinOutlook\bin\Debug\ToolzAddinOutlook.dll.CodeAnalysisLog.xml
-C:\Users\mohan\source\GitRepos\ToolzAddinOutlook\ToolzAddinOutlook\ToolzAddinOutlook\bin\Debug\ToolzAddinOutlook.dll.lastcodeanalysissucceeded
+C:\Users\mohan\source\GitRepos\ToolzAddinOutlook\ToolzAddinOutlook\ToolzAddinOutlook\obj\Debug\ToolzAddinOutlook.csprojAssemblyReference.cache
+C:\Users\mohan\source\GitRepos\ToolzAddinOutlook\ToolzAddinOutlook\ToolzAddinOutlook\obj\Debug\ToolzAddinOutlook.ToolzSettings.resources
+C:\Users\mohan\source\GitRepos\ToolzAddinOutlook\ToolzAddinOutlook\ToolzAddinOutlook\bin\Debug\ToolzAddinOutlook.dll.config

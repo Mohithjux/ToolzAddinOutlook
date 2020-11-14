@@ -39,14 +39,18 @@
             this.AttachmentCtrl = this.Factory.CreateRibbonGroup();
             this.ZipPass = this.Factory.CreateRibbonButton();
             this.ZipNoPass = this.Factory.CreateRibbonButton();
+            this.ToolzAddingSettings = this.Factory.CreateRibbonGroup();
+            this.Settings = this.Factory.CreateRibbonButton();
             this.Toolz.SuspendLayout();
             this.AttachmentCtrl.SuspendLayout();
+            this.ToolzAddingSettings.SuspendLayout();
             this.SuspendLayout();
             // 
             // Toolz
             // 
             this.Toolz.ControlId.ControlIdType = Microsoft.Office.Tools.Ribbon.RibbonControlIdType.Office;
             this.Toolz.Groups.Add(this.AttachmentCtrl);
+            this.Toolz.Groups.Add(this.ToolzAddingSettings);
             this.Toolz.Label = "Toolz++";
             this.Toolz.Name = "Toolz";
             // 
@@ -80,6 +84,21 @@
             this.ZipNoPass.ShowImage = true;
             this.ZipNoPass.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ZipNoPass_Click);
             // 
+            // ToolzAddingSettings
+            // 
+            this.ToolzAddingSettings.Items.Add(this.Settings);
+            this.ToolzAddingSettings.Label = "Settings";
+            this.ToolzAddingSettings.Name = "ToolzAddingSettings";
+            // 
+            // Settings
+            // 
+            this.Settings.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.Settings.Image = ((System.Drawing.Image)(resources.GetObject("Settings.Image")));
+            this.Settings.Label = "Settings";
+            this.Settings.Name = "Settings";
+            this.Settings.ShowImage = true;
+            this.Settings.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ToolzAddinSettings_Click);
+            // 
             // ToolzRibbon
             // 
             this.Name = "ToolzRibbon";
@@ -90,6 +109,8 @@
             this.Toolz.PerformLayout();
             this.AttachmentCtrl.ResumeLayout(false);
             this.AttachmentCtrl.PerformLayout();
+            this.ToolzAddingSettings.ResumeLayout(false);
+            this.ToolzAddingSettings.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -100,6 +121,8 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup AttachmentCtrl;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton ZipPass;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton ZipNoPass;
+        internal Microsoft.Office.Tools.Ribbon.RibbonGroup ToolzAddingSettings;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton Settings;
     }
 
     partial class ThisRibbonCollection

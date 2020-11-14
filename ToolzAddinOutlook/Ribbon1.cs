@@ -243,7 +243,7 @@ namespace ToolzAddinOutlook
                     else
                     {
                         myMailItem.Attachments.Remove(i);
-                        break;
+//                        break;
                     }
                 }
                 catch (System.Runtime.InteropServices.COMException)
@@ -284,7 +284,11 @@ namespace ToolzAddinOutlook
 
                 Outlook.MailItem NewMailItem = (Outlook.MailItem)inspector.Application.CreateItem(Outlook.OlItemType.olMailItem);
                 Word.Document wordDocumentNewMail = NewMailItem.GetInspector.WordEditor as Word.Document;
-                NewMailItem.Display();
+                    if (Properties.Settings.Default.send_opt != "A")
+                    {
+                        NewMailItem.Display();
+                    }
+
 
                 foreach (dynamic strAddress in myMailItem.Recipients)
                 {
@@ -350,5 +354,10 @@ Please check the attachment with the password shared with this mail";
         }
     }
 
+        private void ToolzAddinSettings_Click(object sender, RibbonControlEventArgs e)
+        {
+            ToolzSettings Settings = new ToolzSettings();
+            Settings.ShowDialog();
+        }
     }
 }
